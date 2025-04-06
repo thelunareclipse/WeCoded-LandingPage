@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 header {
   padding: 1rem 1rem 0 1rem;
   display: flex;
@@ -32,8 +37,59 @@ section {
 
 .WeCoded-typologo {
   display: block;
-  margin-top: 15%;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.moving-bg {
+  --primary: #4531ea;
+  --secondary: #ccea71;
+  --tertiary: #9d00e5;
+
+  background: linear-gradient(
+      to right,
+      var(--primary) 0%,
+      var(--secondary) 50%,
+      var(--tertiary) 100%
+    )
+    center center no-repeat;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 60%);
+    background-size: 75vw 75vw;
+    background-repeat: no-repeat;
+    animation: translate-cricle 3s linear infinite;
+  }
+
+  @keyframes translate-cricle {
+    0% {
+      background-position: top 0 right 0;
+      opacity: 0.75;
+    }
+    33% {
+      background-position: top 100% right 0;
+      opacity: 1;
+    }
+    50% {
+      background-position: top 100% right 100%;
+      opacity: 0.9;
+    }
+    66% {
+      background-position: top 0 right 100%;
+      opacity: 1;
+    }
+    100% {
+      background-position: top 0 right 0;
+      opacity: 0.75;
+    }
+  }
 }
