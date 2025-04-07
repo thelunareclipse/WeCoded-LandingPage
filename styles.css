@@ -22,10 +22,9 @@ canvas {
 }
 
 header {
-  padding: 1rem 1rem 0 1rem;
   display: flex;
+  width: 100vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 h1 {
@@ -43,8 +42,13 @@ a {
   text-decoration: none;
 }
 
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
 #wecoded-blackenblem {
-  display: flex;
+  display: block;
   width: 100px;
   height: 100px;
 }
@@ -52,4 +56,14 @@ a {
 .WeCoded-typologo {
   display: block;
   position: absolute;
+  max-width: 38%;
+  left: 28%;
+  top: 45%;
+  height: auto;
   margin: auto 33px;
+}
+
+.WeCodedArticles {
+  position: absolute;
+  display: inline-block;
+}
