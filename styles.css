@@ -8,6 +8,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
+  cursor: url("windows-cursor.png"), auto;
 }
 
 .overlay {
