@@ -59,12 +59,12 @@ section {
   position: absolute;
   max-width: 38%;
   left: 28%;
-  top: 45%;
+  /* top: 45%; */
   height: auto;
   margin: auto 33px;
 }
 
 .WeCodedArticles {
-  position: absolute;
+  position: relative;
   display: inline-block;
 }
