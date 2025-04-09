@@ -1,7 +1,11 @@
-body {
-  width: 100%;
-  height: 100%;
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  overflow: visible;
   cursor: url("/src/windows-cursor.png"), auto;
 }
 
@@ -18,6 +22,7 @@ canvas {
 
 header {
   display: flex;
+  position: sticky;
   width: 100vw;
   align-items: center;
 }
@@ -27,19 +32,45 @@ h1 {
   font-weight: 400;
 }
 
-nav {
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1000;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.sticky-nav nav {
+  position: sticky;
+  justify-content: space-between;
   display: flex;
   gap: 1rem;
 }
 
-a {
+nav a {
   color: #000000;
   text-decoration: none;
+  padding: 40px 20px;
+}
+*/
+.sticky-nav nav {
+  position: sticky;
+  justify-content: space-between;
+  display: flex;
+  gap: 1rem;
 }
 
-section {
-  width: 100vw;
-  height: 100vh;
+nav a {
+  color: #000000;
+  text-decoration: none;
+  padding: 40px 20px;
 }
 
 #wecoded-blackenblem {
@@ -52,15 +83,17 @@ section {
   display: block;
   position: absolute;
   max-width: 38%;
-  left: 28%;
-  /* top: 45%; */
+  align-items: center;
+  top: 20%;
   margin: auto 33px;
 }
 
 .articles {
+  background-color: #9d00e5;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 300px;
   gap: 20px;
 }
 
