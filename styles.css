@@ -4,6 +4,7 @@
   padding: 0;
 }
 body {
+  background-color: #9d00e5;
   margin: 0;
   overflow: visible;
   cursor: url("/src/windows-cursor.png"), auto;
@@ -34,9 +35,11 @@ h1 {
 
 .sticky-nav {
   /*this is to style the header element */
+  background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 4rem;
 }
 
 /*
@@ -92,7 +95,6 @@ nav a {
 }
 
 .articles {
-  background-color: #9d00e5;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
