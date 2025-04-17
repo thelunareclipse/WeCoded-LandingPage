@@ -3,22 +3,29 @@
   margin: 0;
   padding: 0;
 }
+
+html,
 body {
-  background-color: #9d00e5;
+  /* background-color: #9d00e5; */
   margin: 0;
   overflow: visible;
   cursor: url("/src/windows-cursor.png"), auto;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }
 
 .overlay {
   position: absolute;
   z-index: 1;
   text-align: center;
-}
-
-canvas {
-  width: 100vw;
-  height: 100vh;
 }
 
 header {
