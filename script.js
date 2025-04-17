@@ -107,7 +107,14 @@ class App {
 
   resize() {
     this.stageWidth = document.body.clientWidth;
-    this.stageHeight = document.body.clientHeight;
+    this.stageHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
 
     this.canvas.width = this.stageWidth * this.pixelRatio;
     this.canvas.height = this.stageHeight * this.pixelRatio;
