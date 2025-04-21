@@ -92,8 +92,13 @@ nav a {
   height: 100px;
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .WeCoded-typologo {
-  display: block;
   position: absolute;
   max-width: 38%;
   align-items: center;
